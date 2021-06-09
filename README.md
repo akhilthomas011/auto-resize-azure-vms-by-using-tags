@@ -61,8 +61,8 @@ Defaut value is 'False'.
         
 Also, script assumes that you have created 'Azure Run as Account' and has the default Azure Connection asset 'AzureRunAsConnection'. It also assumes that the required Az Modules specified below are added to Modules Gallery. 
 
-#Requires -Module Az.Accounts
-#Requires -Module Az.Resources
+#Requires -Module Az.Accounts 
+#Requires -Module Az.Resources 
 #Requires -Module Az.Compute
 
 
