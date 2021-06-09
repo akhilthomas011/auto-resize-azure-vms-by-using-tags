@@ -39,7 +39,7 @@
         Specify the VM scale up VM size in the ScaleupSize tag. In the ScaledownSize tag, specify the VM scale down size. Please note that both scale up and scale down
         occurs only if both tags are set correctly on desired VMs. If you want to include a VM in auto scaling later, just add the two tags and they will be added automatically for the schedule.
         
-        Example: https://i1.gallery.technet.s-msft.com/rescale-azure-vms-by-using-c6a6a5ae/image/file/206741/1/tags.png
+        Example: https://github.com/azureautomation/auto-resize-azure-vms-by-using-tags/raw/master/images/tags.png
 
         The script works best with Runbook Scheduler with 2 schedules - For Scale Up and Scale Down.In Scale Up schedule, set the 'SCALEUP' parameter to $True and in 
         Scale Down schedule, set the 'SCALEUP' parameter to $False.
@@ -64,7 +64,7 @@
 
         By default, the value will be null. If you are excluding multiple Virtual Machines, enter the names comma separated.
 
-        Example: https://i1.gallery.technet.s-msft.com/rescale-azure-vms-by-using-c6a6a5ae/image/file/206742/1/parameters.png
+        Example: https://github.com/azureautomation/auto-resize-azure-vms-by-using-tags/raw/master/images/parameters.png
 
     
     .PARAMETER SCALEUP

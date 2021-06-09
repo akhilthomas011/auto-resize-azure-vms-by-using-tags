@@ -14,7 +14,7 @@
     "RunbookKindString": "PowerShell",
     "Summary": "This script rescales your Azure VMs using the tags specified on the VMs. The script has 3 parameters - RGEXCEPTIONS,VMEXCEPTIONS,SCALEUP. VMs should have 2 tags - 'ScaleupSize' and 'ScaledownSize'. The script uses default connection asset 'AzureRunAsConnection'.",
     "Title": "Auto Resize Azure VMs by using Tags",
-    "UpdatedDate": "2018-8-15T00:00:00",
+    "UpdatedDate": "2021-6-09T00:00:00",
     "Url": "https://github.com/azureautomation/auto-resize-azure-vms-by-using-tags",
-    "UserTags": "VM Lifecycle Management, Dev / Test Environments, Powershell automation"
+    "UserTags": "VM Lifecycle Management, Dev / Test Environments, Powershell automation,azureautomationrunbookgallery"
 }

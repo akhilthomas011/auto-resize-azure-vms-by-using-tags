@@ -3,15 +3,14 @@
 
             
 
-This script resizes your Azure VMs using the tags specified on the VMs. The script has 3 parameters - RGEXCEPTIONS,VMEXCEPTIONS,SCALEUP. To make this automation script work, we have to specify 2 tags on each desired VM - 'ScaleupSize' and 'ScaledownSize'.
- Specify the VM scale up VM size in the ScaleupSize tag. In the ScaledownSize tag, specify the VM scale down size. Please note that both scale up and scale down occurs only if both tags are set correctly on desired VMs. If you want to include a VM in auto scaling
- later, just add the two tags and they will be added automatically for the schedule.
+This script resizes your Azure VMs using the tags specified on the VMs. The script has 3 parameters - RGEXCEPTIONS,VMEXCEPTIONS,SCALEUP. To make this automation script work, we have to specify 2 tags on each desired VM - 'ScaleUpSize' and 'ScaleDownSize'.
+ Specify the Scale Up VM size in the ScaleupSize tag. In the ScaledownSize tag, specify the VM Scale Down size. Please note that both scale up and scale down occurs only if both tags are set correctly on desired VMs. If you want to include a VM in auto scaling later, just add the two tags and they will be added automatically for the schedule.
 
 
  
 
 
-![Image](https://github.com/azureautomation/auto-resize-azure-vms-by-using-tags/raw/master/tags.png)
+![Image](https://github.com/azureautomation/auto-resize-azure-vms-by-using-tags/raw/master/images/tags.png)
 
 
  
@@ -52,27 +51,20 @@ Defaut value is 'False'.
  
 
 
-![Image](https://github.com/azureautomation/auto-resize-azure-vms-by-using-tags/raw/master/parameters.png)
+![Image](https://github.com/azureautomation/auto-resize-azure-vms-by-using-tags/raw/master/images/parameters.png)
 
 
  
 
 
-**NOTE**: The script works best with Runbook Scheduler with 2 schedules - For Scale up and Scale down.In Scale Up schedule, set the 'SCALEUP' parameter to $True and in Scale Down schedule, set the 'SCALEUP' parameter to $False.
+**NOTE**: The script works best with Runbook Scheduler with 2 schedules - For Scale Up and Scale Down. In Scale Up schedule, set the 'SCALEUP' parameter to $True and in Scale Down schedule, set the 'SCALEUP' parameter to $False.
         
-Also, script assumes that you have created 'Azure Run as Account' and has the default Azure Connection asset 'AzureRunAsConnection'.
+Also, script assumes that you have created 'Azure Run as Account' and has the default Azure Connection asset 'AzureRunAsConnection'. It also assumes that the required Az Modules specified below are added to Modules Gallery. 
 
+#Requires -Module Az.Accounts
+#Requires -Module Az.Resources
+#Requires -Module Az.Compute
 
- 
-
- 
-
- 
 
 
 Please send your valuable feedbacks to akhilthomas011@gmail.com
-
-
-        
-    
-TechNet gallery is retiring! This script was migrated from TechNet script center to GitHub by Microsoft Azure Automation product group. All the Script Center fields like Rating, RatingCount and DownloadCount have been carried over to Github as-is for the migrated scripts only. Note : The Script Center fields will not be applicable for the new repositories created in Github & hence those fields will not show up for new Github repositories.
